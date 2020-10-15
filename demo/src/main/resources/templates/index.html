@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<a href="/create">Tilføj bil</a>
+
+<h1> Liste over biler!</h1>
+<p th:each="car : ${cars}">
+    <span th:text="${car.name}"></span>
+    <span th:text="${car.max_speed}"></span>
+</p>
+
+</body>
+</html>
